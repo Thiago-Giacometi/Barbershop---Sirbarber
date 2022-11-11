@@ -1,16 +1,12 @@
-/* Red 1 #BA181B */
-/* Red 2 #E5383B */
-/* Black 1 #0B090A */
-/* Black 2 #161A1D */
-/* White 1 #FFFFFF */
-/* White 2 #F5F3F4 */
-/* White 3 #F5F3F4 */
-
 /* Generico */
-
 body {
   font-family: 'Epilogue', sans-serif;
   color: #0B090A;
+}
+
+.container {
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -21,20 +17,13 @@ body {
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 22px;
 }
 
 .btn-sm {
   padding: 12px 24px;
   font-size: 0.9rem;
-}
-
-.btn-primary {
-  background-color: #E5383B;
-}
-
-.btn-primary:hover {
-  background-color: #BA181B;
 }
 
 .btn-outline {
@@ -47,23 +36,12 @@ body {
   color: #d9d9d9;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
+.btn-primary {
+  background-color: #BA181B;
 }
 
-.overtitle {
-  color: #E5383B;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.title {
-  font-size: 44px;
-  line-height: 56px;
-  font-weight: 700;
+.btn-primary:hover {
+  background-color: #E5383B;
 }
 
 /* Layout */
@@ -74,11 +52,26 @@ body {
 
 .header {
   color: #FFFFFF;
-  padding: 24px 72px;
+  padding: 20px;
+
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.overtitle {
+  color: #E5383B;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 /* HERO SECTION */
@@ -86,54 +79,52 @@ body {
 #hero-container {
   background-color: #0B090A;
   color: #FFFFFF;
-  padding: 0px 72px;
+
 }
 
 .hero {
   display: flex;
   align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
-  padding: 96px 0px;
-  flex: 1;
-}
-
-.hero-img {
-  flex: 1;
-  align-self: flex-end;
+  padding: 48px 0px;
 }
 
 .hero-img img {
-  max-width: 100%;
+  max-width: 320px;
+  flex: 1;
 }
 
 .hero-text__title {
-  font-size: 56px;
-  line-height: 64px;
   font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
 }
 
 .hero-text__subtitle {
-  font-size: 20px;
-  line-height: 28px;
-  max-width: 520px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 
 /* SERVICES SECTION */
 
 #services-container {
-  padding: 96px 72px;
+  padding: 48px 20px;
 }
 
 .services-list {
   margin-top: 48px;
   display: flex;
+  flex-direction: column;
   gap: 32px;
 }
 
@@ -164,12 +155,12 @@ body {
 
 /* LOCATION SECTION */
 
-#location-container{
+#location-container {
   background-color: #F5F3F4;
 }
 
-#location-container .location{
-  padding: 96px 72px 48px;
+#location-container .location {
+  padding: 48px 20px 24px 20px;
 }
 
 #location-container address {
@@ -185,13 +176,14 @@ body {
   color: #FFF;
 }
 
-.footer{
-  padding: 48px 72px;
+.footer {
+  padding: 48px 20px;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+
 
 }
 
@@ -204,6 +196,105 @@ body {
   gap: 10px;
 }
 
+.footer-svg {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
 #footer-container a {
   color: currentColor;
+}
+
+/*-----------------------------------------------------------------------*/
+
+@media (min-width: 361px) {
+
+  /* Generico */
+
+
+  .container {
+    max-width: 1280px;
+  }
+
+  .overtitle {
+    color: #E5383B;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 56px;
+    font-weight: 700;
+  }
+
+  /* Layout */
+
+  .header {
+    padding: 24px 72px;
+  }
+
+  /* HERO SECTION */
+
+  #hero-container {
+    padding: 0px 72px;
+  }
+
+  .hero {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .hero-text {
+    padding: 96px 0px;
+  }
+
+  .hero-img {
+    align-self: flex-end;
+  }
+
+  .hero-img img {
+    max-width: 100%;
+  }
+
+  .hero-text__title {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 700;
+  }
+
+  .hero-text__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 520px;
+  }
+
+  /* SERVICES SECTION */
+
+  #services-container {
+    padding: 96px 72px;
+  }
+
+  .services-list {
+    flex-direction: row;
+  }
+
+  /* LOCATION SECTION */
+
+  #location-container .location {
+    padding: 96px 72px 48px;
+  }
+
+  /* FOOTER CONTAINER */
+
+  .footer {
+    padding: 48px 72px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
